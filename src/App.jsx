@@ -20,7 +20,7 @@ function App() {
   }, [])
 
   return (
-    <main className='bg-black min-h-screen text-white'>
+    <main className=' text-white'>
       <Location location={location} setLocation={setLocation} />
       <ResidentsList residents={location?.residents} />
     </main>

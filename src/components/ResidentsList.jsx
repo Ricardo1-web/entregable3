@@ -1,7 +1,6 @@
-
 import { useState } from "react"
-import { paginationLogic } from "../util/pagination"
 import Resident from "./Resident"
+import { paginationLogic } from "../util/pagination"
 
 const ResidentsList = ({ residents }) => {
   const [currentPage, setCurrentPage] = useState(1)
@@ -16,8 +15,8 @@ const ResidentsList = ({ residents }) => {
         ))}
       </section>
       {/*PAGINACION*/}
-      <section className="{flex justify-center gap-4 flex-wrap pb-8">
-        {pages.map((page) =>(
+      <section className="flex justify-center gap-4 flex-wrap pb-8">
+        {pages.map((page) => (
           <button
             key={page}
             onClick={() => setCurrentPage(page)}

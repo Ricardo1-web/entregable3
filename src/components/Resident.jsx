@@ -16,19 +16,18 @@ const Resident = ({ residentUrl }) => {
     }, [])
 
     return (
-        <article>
+        <article className="border-2 border-green-400">
             <div className="relative">
                 <img src={residentInfo?.image} alt="" />
-                <div className="flex items-center gap-2 absolute bottom-3 left-1/2 -translate-x-1/2">
-
-                    <div className={`h-3 aspect-square ${statusStyles[residentInfo?.status]} bg-orange-500 rounded-full`}></div>
+                <div className="box-border h-8 w-15 p-2 border-2 bg-black opacity-70 text-white flex items-center gap-2 absolute bottom-3 left-1/2 -translate-x-1/2">
+                    <div className={`container h-3 aspect-square ${statusStyles[residentInfo?.status]} rounded-full`}
+                    ></div>
                     {residentInfo?.status}
-
                 </div>
             </div>
-            <section>
-                <h4>{residentInfo?.name}</h4>
-                <ul>
+            <section className="border border-green-400 bg-black opacity-90 text-center">
+                <h4 className="text-2xl gap-10 columns-1 vector">{residentInfo?.name}</h4>
+                <ul className="text-left columns-1 p-2">
                     <li>Species:<span> {residentInfo?.species} </span> </li>
                     <li>Origin:<span> {residentInfo?.origin.name} </span> </li>
                     <li>Times appear:<span> {residentInfo?.episode.length} </span> </li>

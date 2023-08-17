@@ -14,7 +14,7 @@ export const paginationLogic = (currentPage, residents) => {
   const residentsInPage = residents.slice(sliceStart, sliceEnd)
 
   const pages = []
-  for (let i = 1; 1 <= totalPages; i++) {
+  for (let i = 1; i <= totalPages; i++) {
     pages.push(i)
   }
 
